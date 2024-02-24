@@ -21,10 +21,10 @@ public class LevelMaker : MonoBehaviour
             for (int b = 0; b < levelWidth; b++)
             {
                 GameObject sand = Instantiate(Sand, new Vector3(x, y, 0f), Quaternion.identity);
-                x+=2;
+                x+=4;
             }
             x = -0.5f * levelWidth;
-            y+=2;
+            y+=4;
         }
     }
 }
