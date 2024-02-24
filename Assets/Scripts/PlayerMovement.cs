@@ -8,11 +8,13 @@ public class PlayerMovement : MonoBehaviour
     public TextMeshProUGUI gameOverText;
 
     private Rigidbody2D rb;
+    private Animator Anim;
     private Vector2 movement;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        Anim = GetComponent<Animator>();
         gameOverText.gameObject.SetActive(false); // Ensure the game over text is hidden at start
     }
 
@@ -21,6 +23,9 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         movement.Normalize(); // Normalize to prevent faster diagonal movement
+
+        
+
     }
 
     void FixedUpdate()
