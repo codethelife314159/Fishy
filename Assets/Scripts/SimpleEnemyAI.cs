@@ -17,6 +17,13 @@ public class SimpleEnemyAI : MonoBehaviour
     private float trackingTimer = 0f; // Timer to track the delay
     public float angleRandomness = 10f; // Maximum random angle offset for strafing
 
+
+    void Start()
+    {
+        player = GameObject.Find("Player").transform;
+    }
+
+
     void Update()
     {
         HandleMovement();

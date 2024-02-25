@@ -25,7 +25,10 @@ public class PlayerMovement : MonoBehaviour
         movement.Normalize(); // Normalize to prevent faster diagonal movement
 
         
-
+        if(Input.GetAxisRaw("Horizontal") > 0)
+        {
+            
+        }
     }
 
     void FixedUpdate()

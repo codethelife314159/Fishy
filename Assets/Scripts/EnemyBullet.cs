@@ -6,12 +6,20 @@ public class EnemyBullet : MonoBehaviour
     public float damage = 10f; // Damage the bullet will deal to the player
     public Rigidbody2D rb; // Rigidbody2D component of the bullet
     public GameObject Player;
+
+    public Vector2 v2;
+    public float angle;
+
     void Start()
     {
         Destroy(gameObject, 2f);
-
         Player = GameObject.Find("Player");
-        transform.LookAt(Player.transform);
+        Vector2 direction = (Player.transform.position - transform.position).normalized;
+
+        float radvalue = Mathf.Atan2(direction.y, direction.x);
+        angle = radvalue * (180 / Mathf.PI);
+
+        transform.Rotate(0f, 0f, angle);
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo)
