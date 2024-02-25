@@ -7,7 +7,6 @@ public class EnemyBullet : MonoBehaviour
     public Rigidbody2D rb; // Rigidbody2D component of the bullet
     public GameObject Player;
 
-    public Vector2 v2;
     public float angle;
 
     void Start()
