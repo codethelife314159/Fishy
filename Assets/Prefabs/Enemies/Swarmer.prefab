@@ -166,7 +166,7 @@ MonoBehaviour:
   stoppingDistance: 1
   retreatDistance: 1
   strafeSpeed: 30
-  bulletPrefab: {fileID: 3376422131607688965, guid: dab6baa6e338eaa498bd4eb11d7d1418, type: 3}
+  bulletPrefab: {fileID: 7846986128974231721, guid: f6501fa6c6b96456e96f4dad02bfc848, type: 3}
   shootingInterval: 2
   bulletSpeed: 7
   health: 8

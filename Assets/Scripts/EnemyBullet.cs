@@ -5,10 +5,13 @@ public class EnemyBullet : MonoBehaviour
     public float speed = 20f; // Speed at which the bullet moves
     public float damage = 10f; // Damage the bullet will deal to the player
     public Rigidbody2D rb; // Rigidbody2D component of the bullet
-
+    public GameObject Player;
     void Start()
     {
         Destroy(gameObject, 2f);
+
+        Player = GameObject.Find("Player");
+        transform.LookAt(Player.transform);
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo)
